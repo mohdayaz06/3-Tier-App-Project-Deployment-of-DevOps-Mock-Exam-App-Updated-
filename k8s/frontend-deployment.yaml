@@ -14,12 +14,20 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: mohdayazz/devops-exam-frontend:v1
+        image: mohdayazz/devops-exam-frontend:v2
         ports:
         - containerPort: 80
         env:
         - name: BACKEND_URL
-          value: http://backend-service:5000
+          value: http://a7f5aa0fc391f465584fa1c1dc3b826e-557107999.ap-south-1.elb.amazonaws.com:5000
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/nginx/conf.d/default.conf
+          subPath: default.conf
+      volumes:
+      - name: config-volume
+        configMap:
+          name: frontend-config
 ---
 apiVersion: v1
 kind: Service

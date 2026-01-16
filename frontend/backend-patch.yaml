@@ -1,0 +1,12 @@
+spec:
+  template:
+    spec:
+      containers:
+      - name: backend
+        volumeMounts:
+        - name: html-templates
+          mountPath: /app/templates
+      volumes:
+      - name: html-templates
+        hostPath:
+          path: /home/ubuntu/devops-exam-app/frontend

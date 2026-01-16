@@ -3,12 +3,9 @@ kind: Service
 metadata:
   name: backend-service
 spec:
+  type: ClusterIP
   selector:
     app: backend
   ports:
-    - protocol: TCP
-      port: 5000         # Port the service exposes internally
-      targetPort: 5000   # Port the backend container listens on
-  type: ClusterIP       # Internal service only
-
-
+    - port: 5000
+      targetPort: 5000
