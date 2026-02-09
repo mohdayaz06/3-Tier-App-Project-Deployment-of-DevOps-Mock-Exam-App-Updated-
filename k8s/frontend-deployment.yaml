@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: mohdayazz/devops-exam-frontend:v2
+        image: mohdayazz/devops-exam-frontend:v3
         ports:
         - containerPort: 80
         env:
