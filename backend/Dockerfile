@@ -7,7 +7,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app.py .
 COPY questions.py .
-COPY templates/ templates/
+
+# Only copy templates if backend renders HTML (optional)
+# COPY templates/ templates/
 
 EXPOSE 5000
 
