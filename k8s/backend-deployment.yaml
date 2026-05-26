@@ -16,7 +16,7 @@ spec:
       containers:
       - name: backend
 
-        image: mohdayazz/backend-app:build-1
+        image: mohdayazz/backend-app:build-2
         ports:
         - containerPort: 5000
         env:

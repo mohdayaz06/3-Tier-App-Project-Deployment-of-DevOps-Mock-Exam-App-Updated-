@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: mohdayazz/frontend-app:build-1
+        image: mohdayazz/frontend-app:build-2
         ports:
         - containerPort: 80
         env:
